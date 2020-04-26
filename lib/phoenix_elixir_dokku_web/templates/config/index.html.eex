@@ -1,0 +1,65 @@
+<h2>Config</h2>
+
+<div class="form-grid">
+<%= form_for @conn, Routes.config_path(@conn, :index), [method: "get"], fn f -> %>
+    <div class="section">
+    <div class="label">Logger</div>
+    <div class="group">
+  <label>
+    Truncate: <%= number_input f, :truncate, value: @truncate %>
+  </label>
+  <label>
+    Sync threshold: <%= number_input f, :sync_threshold, value: @sync_threshold %>
+  </label>
+  <label>
+    Discard threshold: <%= number_input f, :discard_threshold, value: @discard_threshold %>
+  </label>
+    <label>
+    Level
+   <%=  select(f, :level, ["debug": "debug", "info": "info", "warn": "warn", "error": "error"], value: @level) %>
+    </label>
+    <label>
+    Handle OTP Reports
+   <%=  select(f, :handle_otp_reports, ["true": "true", "false": "false"], value: @handle_otp_reports) %>
+    </label>
+    <label>
+    Handle SASL Reports
+   <%=  select(f, :handle_sasl_reports, ["true": "true", "false": "false"], value: @handle_sasl_reports) %>
+    </label>
+    <label>
+    Discard Threshold Periodic Check
+   <%=  number_input(f, :discard_threshold_periodic_check, value: @discard_threshold_periodic_check) %>
+    </label>
+    </div>
+    </div>
+
+    <div class="section">
+    <div class="label">Logger Backends: Console</div>
+    <div class="group">
+    <label>
+      Max Buffer: <%= number_input f, :console_max_buffer, value: @console_max_buffer %>
+    </label>
+    <label>
+    Handle OTP Reports
+   <%=  select(f, :console_handle_otp_reports, ["true": "true", "false": "false"], value: @console_handle_otp_reports) %>
+    </label>
+    <label>
+    Handle SASL Reports
+   <%=  select(f, :console_handle_sasl_reports, ["true": "true", "false": "false"], value: @console_handle_sasl_reports) %>
+    </label>
+    <label>
+    Device
+   <%=  select(f, :console_device, ["user": "user", "standard_error": "standard_error"], value: @console_device) %>
+    </label>
+    </div>
+    </div>
+
+    <div class="section">
+<label>
+  <%= submit "Update" %>
+</label>
+</div>
+
+<% end %>
+
+<pre><code><%= @inspection %></code></pre>

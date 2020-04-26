@@ -1,0 +1,26 @@
+<section class="phx-hero">
+  <h2><%= gettext "Welcome to %{name}!", name: "PhoenixElixirDokku" %></h2>
+</section>
+
+<article style="text-align: center; padding: 5rem 0">
+  <ul style="list-style:none">
+   <li>Mix Project version: <%= PhoenixElixirDokku.MixProject.project[:version] %></li>
+   <li>Mix.env: <%= Mix.env() %></li>
+  </ul>
+</article>
+
+<article>
+You can use the API endpoint directly:
+<pre><code>curl -sS -q -X GET -H "Content-Type: application/json" <%= PhoenixElixirDokkuWeb.Endpoint.url() %>/api/users | jq
+</code></pre>
+</article>
+
+<article>
+ChangeLog:
+<pre><code><%= PhoenixElixirDokku.MixProject.changelog() %></code></pre>
+</article>
+
+<article>
+Versions:
+<pre><code><%= PhoenixElixirDokku.MixProject.deps_lock() %></code></pre>
+</article>

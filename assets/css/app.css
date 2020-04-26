@@ -1,0 +1,90 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.css";
+
+.severity-info {
+  color: #828888;
+}
+.severity-debug {
+  color: #79c4e6;
+}
+.severity-error {
+  color: #e64449;
+}
+.severity-warn {
+  color: #e69e3f;
+}
+.hidden {
+  visibility: hidden;
+}
+.td-wrap {
+  word-break: break-word;
+}
+.td-limit {
+  max-width: 200px;
+}
+
+.form-small {
+  z-index: 1;
+  border-top: 1px solid gray;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  display: flex;
+  bottom: 0;
+  margin-left: -2rem;
+}
+.form-small form {
+  max-width: 430px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.form-small form label {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+.form-small form input {
+  margin: 1rem;
+}
+.form-small form label input {
+  width: 100px;
+  margin: 0;
+  margin-left: 1rem;
+}
+.form-small form button {
+  margin: 0;
+}
+.form-small ul {
+  padding-left: 2rem;
+}
+.form-small .listing {
+  padding: 2rem;
+  display: flex;
+}
+.form-small .listing div {
+  padding-right: 1rem;
+}
+.form-small .listing div.error {
+  color: #ff353b;
+}
+
+.tr-file {
+  background-color: lightblue;
+  color: darkcyan;
+  font-weight: bold;
+}
+
+.tr-file td {
+  padding-left: 1rem;
+}
+/*table {*/
+/*    display: block;*/
+/*    overflow-x: auto;*/
+/*    white-space: nowrap;*/
+/*}*/
